@@ -1,0 +1,486 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    /* border: 2px solid red;  */
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  
+} 
+
+header {
+    font-family: "Overpass", sans-serif;
+    padding: 2rem 10rem;
+    text-align: center;
+    background: url(./images/bg-pattern-intro-desktop.svg);
+    background-color: hsl(356, 100%, 66%);
+    background-position: 25% 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 5rem;
+    
+
+}/* color: white; */
+
+header p, header a{
+    color: white;
+    text-decoration: none;
+}
+
+
+header p:hover, header a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.header-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav-menus{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.3rem;
+    width: 40%;
+
+}
+
+.header-tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0.3rem;
+    margin-left: 2rem;
+}
+
+
+.header-tab-arrow{
+    width: 10px;
+    height: 7px;
+    transform: rotate(0deg);
+    transition: transform 250ms ease;
+}
+
+.header-tab-arrow.show{
+    transform: rotate(180deg);
+    transition: transform 250ms ease;
+}
+
+.header-dropdown{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+.header-dropdown a{
+    color: hsl(208, 49%, 24%);
+    font-family: "Overpass" sans-serif;
+}
+
+.header-dropdown a:hover{
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.header-nav-btns{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: 25rem;
+}
+
+
+
+.sign-up-btn{
+    font-family: "Overpass" sans-serif;
+    font-weight: 600;
+    border-radius: 5rem;
+    padding:7px;
+    width: 5rem;
+    border: none;
+    color: hsl(355, 100%, 74%);
+    background: white;
+    transition: 0.3s;
+    margin-left: 1rem;
+   
+}
+
+.header-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem;
+}
+
+.header-info h1{
+    font-family: "Overpass" sans-serif;
+    font-size: 3rem;
+    color: white;
+}
+
+
+
+
+
+
+.header-start-btn, .header-learn-btn{
+    font-family: "Overpass" sans-serif;
+    font-weight: 600;
+    border-radius: 5rem;
+    padding:7px;
+    width: 7rem;
+    border: none;
+    color: hsl(355, 100%, 74%);
+    background-color: white;
+    transition: 0.3s;
+}
+
+.header-start-btn:hover, .header-learn-btn:hover {
+    cursor: pointer;
+    background-color: hsl(355, 100%, 74%);
+    color: white;
+}
+
+
+
+
+
+
+
+
+.header-info-btns{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.sign-up-btn:hover{
+    cursor: pointer;
+    background-color: hsl(13, 100%, 72%);
+    color: white;
+}
+
+.header-hamburger-btn{
+    display: none;
+}
+.header-close-btn{
+    display: none;
+}
+
+.header-mobile-menu{
+    display : none;
+}
+
+.header-mobile-menu.show{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 1rem; 
+    background-color: blue;
+    border-radius: 0.5rem;
+    right: 2rem;
+    margin-top: 15rem;
+    padding: 1rem;
+
+}
+
+.header-mobile-tab{
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    flex-wrap: nowrap;
+    gap: 0.3rem;
+}
+
+.header-mobile-tab-text{
+    color: hsl(208, 49%, 24%);
+    font-weight: bold;
+}
+
+.header-mobile-tab-text.show{
+    opacity: 0.7;
+}
+
+.header-mobile-arrow{
+    width: 10px;
+    height: 7px;
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.header-mobile-submenu{
+    display: none;
+
+}
+
+.header-mobile-submenu.show{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: hsl(240, 2%, 79%);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.header-mobile-submenu a{
+    color: hsl(208, 49%, 24%);
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+ hr{
+    background-color:hsl(240, 2%, 79%);
+    width: 10rem;
+}
+
+.header-nav-mobile-btn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header-nav-mobile-btn a{
+    color: hsl(208, 49%, 24%);
+    font-weight: bold;
+}
+
+.header-nav-mobile-btn button{
+    background-color: hsl(13, 100%, 72%);
+    border: none;
+    border-radius: 1.5rem;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    width: 5rem;
+    font-family: "Overpass" sans-serif;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 845px) {
+    header{
+        padding: 4rem 2rem
+    } 
+
+}
+
+
+#article-one {
+    background-color: none;
+    color: hsl(207, 13%, 34%);
+    font-family: "Overpass", sans-serif;
+    padding: 8rem;
+    /* margin-top: 2rem; */
+    /* margin-bottom: 10rem; */
+    line-height: 2rem;
+    
+
+}
+
+#article-one h2{
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    color: hsl(207, 13%, 34%);
+    /* line-height: 4rem; */
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+}
+
+#article-one h3{
+    /* margin-top: 2.5rem; */
+    display: flex;
+    font-size: rem;
+    margin-bottom: 1rem;
+    color: hsl(207, 13%, 34%);
+}
+ 
+#article-one .robust{
+    margin-top: -2rem;
+}
+
+.article-one-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article-one-image{
+    position: absolute;
+    max-width: 50%;
+    height: 700px;
+    object-fit: contain;
+    display: flex;
+    top: 27rem;
+    right: -100px;
+    z-index: -1;;
+
+}
+
+.article-one-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 5rem;
+    width: 50%;
+    font-family: "Overpass" sans-serif;
+    line-height: 2rem;
+
+}
+
+#article-two {
+    display: flex;
+    background: url(./images/bg-pattern-circles.svg);
+    background-size: auto;
+    background-position: -65% 85%;
+    background-repeat: no-repeat;
+    background-color: hsl(237, 17%, 21%);
+    height: 395px;
+    /* border-bottom-left-radius: 4rem; */
+    border-radius: 0 5rem 0 5rem;
+    margin-top: 10rem;
+    font-family: "Overpass", sans-serif;
+}
+
+.article-two-container{
+    display: flex;
+    align-items: center;
+}
+
+
+#article-two img {
+    /* display: flex;
+    position: relative;
+    
+   padding: 5rem; */
+    display: flex;
+   position: absolute;
+   left: 50px;
+   margin-top: 3rem;
+   margin-left: 4rem;
+}
+
+#article-two section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: -3rem;
+    width: 50%;
+    color: white;
+    padding-right: 10rem;
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+
+#article-two h2{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+
+#article-three{
+    background-color: white;
+    padding: 8rem;
+    line-height: 1.5rem;
+    /* margin-top: 10rem; */
+    margin-bottom: 10rem;
+
+    font-family: "Overpass", sans-serif;
+    color: hsl(237, 23%, 32%);
+}
+
+#article-three h3{
+    color: hsl(208, 49%, 24%);
+    margin-bottom: 1rem;
+}
+
+.article-three-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 50%;
+    margin-left: auto;
+
+}
+
+.article-three-image{
+    display: flex;
+    position: absolute;
+    left: -18rem;
+    height: 700px;
+    
+}
+
+.article-three-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 11rem;
+}
+
+
+footer{
+    background-color: hsl(240, 10%, 16%);
+    color: white;
+    font-family: "Overpass", sans-serif;
+    border-top-right-radius: 5rem;
+    padding: 4rem 20rem 5rem 10rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer a {
+    color: hsl(203, 6%, 73%);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+footer img{
+    width: 80px;
+    height: 30px;
+}
+
+footer p{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
