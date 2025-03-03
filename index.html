@@ -13,208 +13,261 @@
     rel="stylesheet" />
   <title>Frontend Mentor | [Blogr]</title>
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- <script src="jquery-2.1.4.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
 </head>
 
-<body>
-  <header>
-    <nav class="header-navbar">
-      <div class="header-nav-menus">
-        <img src="./images/logo.svg" alt="Blogr logo" />
-        <div class="header-tab-prod">
-          <div class="header-tab">
-            <p>Product</p>
-            <img class="header-tab-arrow" src="./images/icon-arrow-light.svg" alt="Arrow Dropdown for Product Links" />
+<body onload="setLoader()" id="container">
+    <header>
+      <nav class="header-navbar">
+        <div class="header-nav-menus">
+          <img src="./images/logo.svg" alt="Blogr logo" />
+          <div class="header-tab-prod">
+            <div class="header-tab">
+              <p>Product</p>
+              <img class="header-tab-arrow" src="./images/icon-arrow-light.svg"
+                alt="Arrow Dropdown for Product Links" />
+            </div>
+            <div class="header-dropdown">
+              <a href="#">Overview</a>
+              <a href="#">Pricing</a>
+              <a href="#">Marketplace</a>
+              <a href="#">Features</a>
+              <a href="#">Integrations</a>
+            </div>
           </div>
-          <div class="header-dropdown">
-            <a href="#">Overview</a>
-            <a href="#">Pricing</a>
-            <a href="#">Marketplace</a>
-            <a href="#">Features</a>
-            <a href="#">Integrations</a>
+
+          <div class="header-tab-company">
+            <div class="header-tab">
+              <p>Company</p>
+              <img class="header-tab-arrow" src="./images/icon-arrow-light.svg"
+                alt="Arrow Dropdown for Company Links" />
+            </div>
+            <div class="header-dropdown">
+              <a href="#">About</a>
+              <a href="#">Team</a>
+              <a href="#">Blog</a>
+              <a href="#">Careers</a>
+            </div>
           </div>
+
+          <div class="header-tab-connect">
+            <div class="header-tab">
+              <p>Connect</p>
+              <img class="header-tab-arrow" src="./images/icon-arrow-light.svg"
+                alt="Arrow Dropdown for Connect Links" />
+            </div>
+            <div class="header-dropdown">
+              <a href="#">Contact</a>
+              <a href="#">Newsletter</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="header-nav-btns">
+            <a href="#">Login</a>
+            <button class="sign-up-btn">Sign Up</button>
+          </div>
+
+          <img class="header-hamburger-btn" src="./images/icon-hamburger.svg" alt="Navbar Hamburger Menu Button">
+          <img class="header-close-btn" src="images/icon-close.svg" alt="Navbar Close Button">
+      </nav>
+
+
+
+      <div class="header-mobile-menu">
+        <div class="header-mobile-tab">
+          <p class="header-mobile-tab-text">Product</p>
+          <img class="header-mobile-arrow" src="./images/icon-arrow-dark.svg"
+            alt="Arrow Dropdown for Mobile Product Links">
+        </div>
+        <div class="header-mobile-submenu">
+          <a href="#">Overview</a>
+          <a href="#">Pricing</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Features</a>
+          <a href="#">Integrations</a>
         </div>
 
-        <div class="header-tab-company">
-          <div class="header-tab">
-            <p>Company</p>
-            <img class="header-tab-arrow" src="./images/icon-arrow-light.svg" alt="Arrow Dropdown for Company Links" />
-          </div>
-          <div class="header-dropdown">
-            <a href="#">About</a>
-            <a href="#">Team</a>
-            <a href="#">Blog</a>
-            <a href="#">Careers</a>
-          </div>
+        <div class="header-mobile-tab">
+          <p class="header-mobile-tab-text">Company</p>
+          <img class="header-mobile-arrow" src="./images/icon-arrow-dark.svg" alt="Arrow Dropdown for Company Links">
+        </div>
+        <div class="header-mobile-submenu">
+          <a href="#">About</a>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
         </div>
 
-        <div class="header-tab-connect">
-          <div class="header-tab">
-            <p>Connect</p>
-            <img class="header-tab-arrow" src="./images/icon-arrow-light.svg" alt="Arrow Dropdown for Connect Links" />
-          </div>
-          <div class="header-dropdown">
-            <a href="#">Contact</a>
-            <a href="#">Newsletter</a>
-            <a href="#">LinkedIn</a>
-          </div>
+        <div class="header-mobile-tab">
+          <p class="header-mobile-tab-text">Connect</p>
+          <img class="header-mobile-arrow" src="./images/icon-arrow-dark.svg" alt="Arrow Dropdown for Connect Links">
         </div>
+        <div class="header-mobile-submenu">
+          <a href="#">Contact</a>
+          <a href="#">Newsletter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+        <hr>
 
-        <div class="header-nav-btns">
+        <div class="header-nav-mobile-btn">
           <a href="#">Login</a>
-          <button class="sign-up-btn">Sign Up</button>
+          <button>Sign Up</button>
         </div>
-
-        <img class="header-hamburger-btn" src="./images/icon-hamburger.svg" alt="Navbar Hamburger Menu Button">
-        <img class="header-close-btn" src="images/icon-close.svg" alt="Navbar Close Button">
-    </nav>
-
-
-
-    <div class="header-mobile-menu">
-      <div class="header-mobile-tab">
-        <p class="header-mobile-tab-text">Product</p>
-        <img class="header-mobile-arrow" src="./images/icon-arrow-dark.svg"
-          alt="Arrow Dropdown for Mobile Product Links">
-      </div>
-      <div class="header-mobile-submenu">
-        <a href="#">Overview</a>
-        <a href="#">Pricing</a>
-        <a href="#">Marketplace</a>
-        <a href="#">Features</a>
-        <a href="#">Integrations</a>
       </div>
 
-      <div class="header-mobile-tab">
-        <p class="header-mobile-tab-text">Company</p>
-        <img class="header-mobile-arrow" src="./images/icon-arrow-dark.svg" alt="Arrow Dropdown for Company Links">
+      <div class="header-info">
+        <h1>A modern publishing platform</h1>
+        <p>Grow your audience and build your online brand</p>
+        <div class="header-info-btns">
+          <button class="header-start-btn">Start for Free</button>
+          <button class="header-learn-btn">Learn More</button>
+        </div>
       </div>
-      <div class="header-mobile-submenu">
-        <a href="#">About</a>
-        <a href="#">Team</a>
-        <a href="#">Blog</a>
-        <a href="#">Careers</a>
-      </div>
+    </header>
 
-      <div class="header-mobile-tab">
-        <p class="header-mobile-tab-text">Connect</p>
-        <img class="header-mobile-arrow" src="./images/icon-arrow-dark.svg" alt="Arrow Dropdown for Connect Links">
+    <article id="article-one" class="article-one">
+      <h2>Designed for the future</h2>
+      <div class="article-one-container">
+        <picture class="article-one-image">
+          <source srcset="./images/illustration-editor-desktop.svg" media="(min-width: 1250px)">
+          <img src="./images/illustration-editor-mobile.svg" alt="Destop Illustration">
+        </picture>
+        <div class="article-one-text">
+          <section>
+            <h3>Introducing an extensible editor</h3>
+            <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.</p>
+          </section>
+          <section>
+            <h3 class="robust">Robust content management</h3>
+            <p> Flexible content management enables users to easily move through posts. Increase the usability of your
+              blog
+              by adding customized categories, sections, format, or flow. With this functionality, you’re in full
+              control.
+            </p>
+          </section>
+        </div>
       </div>
-      <div class="header-mobile-submenu">
-        <a href="#">Contact</a>
-        <a href="#">Newsletter</a>
-        <a href="#">LinkedIn</a>
-      </div>
-      <hr>
+    </article>
 
-      <div class="header-nav-mobile-btn">
-        <a href="#">Login</a>
-        <button>Sign Up</button>
-      </div>
-    </div>
-
-    <div class="header-info">
-      <h1>A modern publishing platform</h1>
-      <p>Grow your audience and build your online brand</p>
-      <div class="header-info-btns">
-        <button class="header-start-btn">Start for Free</button>
-        <button class="header-learn-btn">Learn More</button>
-      </div>
-    </div>
-  </header>
-
-  <article id="article-one" class="article-one">
-    <h2>Designed for the future</h2>
-    <div class="article-one-container">
-      <picture class="article-one-image">
-        <source srcset="./images/illustration-editor-desktop.svg" media="(min-width: 1250px)">
-        <img src="./images/illustration-editor-mobile.svg" alt="Destop Illustration">
-      </picture>
-      <div class="article-one-text">
+    <article id="article-two">
+      <div class="article-two-container">
+        <img src="./images/illustration-phones.svg" alt="Two Phones with Blogr Application Illustration">
         <section>
-          <h3>Introducing an extensible editor</h3>
-        <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
-          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
-          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
-          change the looks of a blog.</p>
-        </section>
-        <section>
-          <h3 class="robust">Robust content management</h3>
-          <p>  Flexible content management enables users to easily move through posts. Increase the usability of your blog
-            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+          <h2>State of the Art Infrastructure</h2>
+          <p> With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
+            connectivity.
+            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
           </p>
         </section>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <article id="article-two">
-    <div class="article-two-container">
-      <img src="./images/illustration-phones.svg" alt="Two Phones with Blogr Application Illustration">
-      <section>
-        <h2>State of the Art Infrastructure</h2>
-        <p> With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
-          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-        </p>
-      </section>
-    </div>
-  </article>
+    <article id="article-three">
+      <div class="article-three-container">
+        <picture class="article-three-image">
+          <source srcset="./images/illustration-laptop-desktop.svg" media="(min-width: 1250px)">
+          <img src="./images/illustration-laptop-mobile.svg" alt="Two Phones with Blogr Application Illustration">
+        </picture>
+        <div class="article-three-text">
+          <section>
+            <h3>Free, open, simple</h3>
+            <p>Blogr is a free and open source application backed by a large community of helpful developers. It
+              supports
+              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
+              tools,
+              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+          </section>
 
-  <article id="article-three">
-    <div class="article-three-container">
-      <picture class="article-three-image">
-        <source srcset="./images/illustration-laptop-desktop.svg" media="(min-width: 1250px)">
-        <img src="./images/illustration-laptop-mobile.svg" alt="Two Phones with Blogr Application Illustration">
-      </picture>
-      <div class="article-three-text">
-        <section>
-          <h3>Free, open, simple</h3>
-          <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
-            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
-            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
-        </section>
+          <section>
+            <h3>Powerful tooling</h3>
+            <p> Batteries included. We built a simple and straightforward CLI tool that makes customization and
+              deployment a breeze, but
+              capable of producing even the most complicated sites.</p>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <footer>
+      <nav class="footer-nav">
+        <img src="./images/logo.svg" alt="Blogr logo">
+
+        <div class="footer-links">
+          <p>Product</p>
+          <a href="#">Overview</a>
+          <a href="#">Pricing</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Features</a>
+          <a href="#">Integrations</a>
+        </div>
+
+        <div class="footer-links">
+          <p>Company</p>
+          <a href="#">About</a>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </div>
+
+        <div class="footer-links">
+          <p>Connect</p>
+          <a href="#">Contact</a>
+          <a href="#">Newsletter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </nav>
+    </footer>
+
+
+
   
-        <section>
-          <h3>Powerful tooling</h3>
-          <p> Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-            capable of producing even the most complicated sites.</p>
-        </section>
-      </div>     
-    </div>
-  </article>
+      <div id="loader" class="loader-wrapper">
+        <div class="loader">
+          <img src="./images/logo.svg" alt="Blogr loader">
+        </div>
+      </div>
 
-  <footer>
-    <nav class="footer-nav">
-     <img src="./images/logo.svg" alt="Blogr logo"> 
+      <script>
 
-     <div class="footer-links">
-      <p>Product</p>
-      <a href="#">Overview</a>
-      <a href="#">Pricing</a>
-      <a href="#">Marketplace</a>
-      <a href="#">Features</a>
-      <a href="#">Integrations</a>
-     </div>
+        function setLoader(){
+          let loading = setTimeout(showLoader, 3000)
+        }
 
-     <div class="footer-links">
-      <p>Company</p>
-      <a href="#">About</a>
-      <a href="#">Team</a>
-      <a href="#">Blog</a>
-      <a href="#">Careers</a>
-     </div>
+        function showLoader() {
+          document.getElementById("loader").style.display = "none"
+          document.getElementById("container").style.display = "block"
+        }
+        // $(window).on("load",function(){
+        //    $(".loader-wrapper").fadeOut("3000");
 
-     <div class="footer-links">
-      <p>Connect</p>
-      <a href="#">Contact</a>
-      <a href="#">Newsletter</a>
-      <a href="#">LinkedIn</a>
-     </div>
-    </nav>
-  </footer>
+        //    setTimeout(() => {
+        //     loader.style.display = "none";
+        //     loader-wrapper.classList.remove("hidden");
+        //    },50000);
+        // });
+        
+
+        // window.onload = function() {
+        //   const loader = document.getElementById("loader");
+        //   const body = document.getElementById("body");
+
+        //   setTimeout(() => {
+        //     loader.style.display = "none";
+        //     content.classList.remove("hidden");
+        //   }, 3000)
+        //  };
 
 
+      </script>
 
-</body>
 
+  </body>
 </html>

@@ -15,6 +15,7 @@ body {
   
 } 
 
+
 header {
     font-family: "Overpass", sans-serif;
     padding: 2rem 10rem;
@@ -159,9 +160,6 @@ header p:hover, header a:hover{
     background-color: hsl(355, 100%, 74%);
     color: white;
 }
-
-
-
 
 
 
@@ -484,3 +482,47 @@ footer p{
 
 
 
+
+
+
+.loader-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* animation: spinner 2s linear infinite;  */
+    
+}
+
+.loader{
+    display: inline-block;
+    margin: auto;
+    border: 2px solid #bf3c24;
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-top: 20px solid hsl(356, 100%, 66%);
+    background-color: #FF7A59;
+    animation: spinner 4s linear infinite; 
+}
+
+.loader-wrapper img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 4rem;
+    margin-left: 3rem; */
+
+    margin: 4rem 0 0 3rem;
+}
+
+@keyframes spinner {
+    0%{transform: rotate(0deg);}   
+    100%{transform: rotate(360deg);}
+}
